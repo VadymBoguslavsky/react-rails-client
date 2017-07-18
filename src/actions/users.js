@@ -51,7 +51,7 @@ export function exitUser(){
 export function signUp(user){
   return function(dispatch, getState) {
     console.log(user);
-    axios.post(API_URL, user, { headers: headers })
+    axios.post(`${API_URL}`, user, { headers: headers })
       .then(res => {
         if (res.status === 200) {
           browserHistory.push('#/users/log_in');
